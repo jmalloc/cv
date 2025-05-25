@@ -16,7 +16,7 @@
 
 body {
   display: grid;
-  row-gap: 2em;
+  row-gap: calc(var(--spacing) * 2);
 
   margin: 0 auto;
   padding: var(--spacing);
@@ -220,16 +220,16 @@ main {
     display: grid;
     grid-template-columns: repeat(
       auto-fit,
-      minmax(calc(var(--max-width) / 3.5), 1fr)
-        /* hack, 3 columns at --max-width */
+      minmax(calc((var(--max-width) - var(--spacing) * 4) / 3), 1fr)
     );
     gap: var(--spacing);
 
-    font-size: 90%;
+    font-size: 85%;
+    line-height: 1.5em;
 
     .card {
-      display: grid;
-      grid-template-rows: min-content min-content auto min-content;
+      display: flex;
+      flex-direction: column;
       row-gap: var(--spacing);
       padding: var(--spacing);
 
@@ -253,17 +253,17 @@ main {
       }
 
       ul:not(.tags) {
-        padding-left: 0.5em;
-
-        li {
-          white-space: nowrap;
-        }
+        font-size: 95%;
 
         li:before {
           margin-right: 0.5em;
           content: "▪";
           color: var(--secondary);
         }
+      }
+
+      :has(+ ul.tags) {
+        flex-grow: 1;
       }
 
       ul.tags {
