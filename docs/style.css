@@ -20,7 +20,7 @@
     --light: #fafafa;
   }
 
-  --primary-muted: hsl(from var(--primary) h calc(s * 0.4) calc(l * 1.8));
+  --primary-muted: hsl(from var(--primary) h calc(s * 0.4) calc(l * 1.85));
   --text-muted: hsl(from var(--text) h calc(s * 0.4) calc(l * 2));
   --text-shadow: 0.025em 0.025em 0.02em var(--light);
 
