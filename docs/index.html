@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>James Harris &mdash; Senior Software Engineer</title>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200..400;1,14..32,300&family=Jura:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;1,14..32,300&family=Jura:wght@500..700&display=swap"
       rel="stylesheet"
     />
 
@@ -21,72 +23,55 @@
 
     <link href="style.css" rel="stylesheet" />
 
-    <title>James Harris &mdash; Senior Software Engineer</title>
-
     <script>
       window.onload = function () {
-        let formatter = new Intl.DateTimeFormat([], {
-          timeZone: "Australia/Brisbane",
-          hour: "numeric",
-          minute: "numeric",
-          hour12: true,
-        });
-
-        let clock = document.getElementById("clock");
-
-        let tick = function () {
-          clock.textContent = formatter.format(Date.now());
-          window.setTimeout(tick, 10000);
-        };
-
-        tick();
+        for (elem of document.querySelectorAll("p, li")) {
+          elem.innerHTML = elem.innerHTML.replace(
+            / &amp; /,
+            ' <span class="amp">&amp;</span> '
+          );
+        }
       };
     </script>
   </head>
+
   <body>
     <div class="splash"></div>
 
+    <img class="avatar" src="images/avatar.jpg" alt="James Harris" />
+
     <header>
-      <img class="avatar" src="images/avatar.jpg" alt="James Harris" />
-
-      <div>
-        <h1>James Harris</h1>
-        <h2>Senior Software Engineer</h2>
-
-        <nav>
-          <ul>
-            <li>
-              <svg><use href="images/icons.svg#location"></use></svg>
-              <a href="https://maps.app.goo.gl/hyKU1jCwBRrNoh1z9"
-                >Brisbane, Australia</a
-              >
-            </li>
-
-            <li>
-              <svg><use href="images/icons.svg#clock"></use></svg>
-              <span id="clock">&mdash;</span>
-            </li>
-
-            <!--li>
-              <svg><use href="images/icons.svg#phone"></use></svg>
-              <a href="tel:+614XXXXXX82">04XX XXX X82</a>
-            </li-->
-
-            <li>
-              <svg><use href="images/icons.svg#email"></use></svg>
-              <a href="mailto:contact@jamesharris.id.au">
-                contact@jamesharris.id.au
-              </a>
-            </li>
-
-            <li>
-              <svg><use href="images/icons.svg#github"></use></svg>
-              <a href="https://github.com/jmalloc">jmalloc</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <h1>James Harris</h1>
+      <h2>Senior Software Engineer</h2>
     </header>
+
+    <nav>
+      <ul>
+        <li id="location">
+          <svg><use href="images/icons.svg#location"></use></svg>
+          <a href="https://maps.app.goo.gl/hyKU1jCwBRrNoh1z9">
+            Brisbane, Australia
+          </a>
+        </li>
+
+        <li id="phone">
+          <svg><use href="images/icons.svg#phone"></use></svg>
+          <a href="tel:+614XXXXXX82">04XX XXX X82</a>
+        </li>
+
+        <li id="email">
+          <svg><use href="images/icons.svg#email"></use></svg>
+          <a href="mailto:contact@jamesharris.id.au">
+            contact@jamesharris.id.au
+          </a>
+        </li>
+
+        <li id="github">
+          <svg><use href="images/icons.svg#github"></use></svg>
+          <a href="https://github.com/jmalloc">jmalloc</a>
+        </li>
+      </ul>
+    </nav>
 
     <main>
       <section id="profile">
@@ -133,17 +118,21 @@
         <div>
           <div class="cards">
             <article class="card">
-              <h4>Architecture &amp; Development</h4>
-              <p>
-                Development of distributed and centralized polyglot applications
-                with an emphasis on clarity, modularity, and long-term
-                maintainability.
-              </p>
+              <h4>Systems Engineering</h4>
+
+              <div>
+                <p>
+                  Engineering of distributed and centralized polyglot systems
+                  with an emphasis on clarity, modularity, and long-term
+                  maintainability.
+                </p>
+              </div>
 
               <ul>
-                <li>event-driven applications</li>
+                <li>event-driven systems</li>
                 <li>event sourcing</li>
                 <li>domain-driven design (DDD)</li>
+                <li>CQRS principles</li>
                 <li>pragmatic microservice architecture</li>
                 <li>unit, integration &amp; contract testing</li>
               </ul>
@@ -153,25 +142,29 @@
                 <li>Node.js</li>
                 <li>PHP</li>
                 <li>gRPC</li>
-                <li>REST + OpenAPI</li>
+                <li>OpenAPI</li>
                 <li>WebSockets</li>
-                <li>Server-sent Events</li>
+                <li>SSE</li>
+                <li>ADRs</li>
               </ul>
             </article>
 
             <article class="card">
               <h4>Databases &amp; Storage</h4>
-              <p>
-                Selection and integration of persistence systems to support a
-                variety of performance, durability, and data modelling
-                requirements.
-              </p>
+
+              <div>
+                <p>
+                  Selection and integration of storage technologies to meet
+                  varying performance, durability, and data modelling
+                  requirements and access patterns.
+                </p>
+              </div>
 
               <ul>
                 <li>relational &amp; document modelling</li>
                 <li>index &amp; query optimisation</li>
-                <li>projection materialisation</li>
                 <li>event retention strategies</li>
+                <li>read-model derivation</li>
               </ul>
 
               <ul class="tags">
@@ -187,16 +180,19 @@
 
             <article class="card">
               <h4>Tooling &amp; Automation</h4>
-              <p>
-                Development of CI/CD pipelines, internal tooling, and versioning
-                strategies that support rapid feedback, repeatable builds, and
-                low-friction deployments.
-              </p>
+
+              <div>
+                <p>
+                  Development of automation pipelines and versioning strategies
+                  that enable rapid feedback, repeatable builds, and
+                  low-friction deployments.
+                </p>
+              </div>
 
               <ul>
-                <li>custom CLI tooling</li>
-                <li>shared CI/CD workflows</li>
-                <li>zero-downtime deployment patterns</li>
+                <li>custom command-line tooling</li>
+                <li>CI/CD workflows</li>
+                <li>zero-downtime deployments</li>
                 <li>dev/prod parity strategies</li>
               </ul>
 
@@ -214,11 +210,14 @@
 
             <article class="card">
               <h4>Platform &amp; Infrastructure</h4>
-              <p>
-                Design and operation of developer platforms, and production
-                environments with emphasis on developer experience, operability,
-                and self-service.
-              </p>
+
+              <div>
+                <p>
+                  Design and operation of developer platforms and production
+                  infrastructure with emphasis on operability, developer
+                  experience, and self-service.
+                </p>
+              </div>
 
               <ul>
                 <li>infrastructure as code (IAC)</li>
@@ -234,128 +233,279 @@
                 <li>Karpenter</li>
                 <li>Terraform</li>
                 <li>Crossplane</li>
-                <li>Telepresence</li>
                 <li>KCL</li>
-                <li>HCL</li>
               </ul>
             </article>
 
             <article class="card">
               <h4>Observability &amp; Operations</h4>
-              <p>
-                Instrumentation and operational readiness practices to improve
-                visibility, reliability, and response across distributed
-                systems.
-              </p>
+
+              <div>
+                <p>
+                  Instrumentation and operational readiness practices to improve
+                  visibility, reliability, and response across distributed
+                  systems.
+                </p>
+              </div>
 
               <ul>
                 <li>structured logging &amp; trace correlation</li>
                 <li>metric collection</li>
                 <li>automated health checks</li>
                 <li>incident response &amp; post-mortems</li>
-                <li>architecture decision records (ADRs)</li>
               </ul>
 
               <ul class="tags">
-                <li>OpenTelemetry</li>
+                <li>OpenTelemetry SDK + Collector</li>
+                <li>AWS X-Ray</li>
                 <li>Prometheus</li>
-                <li>X-Ray</li>
-                <li>Jaeger</li>
-                <li>VictoriaMetrics</li>
-                <li>PagerDuty</li>
               </ul>
             </article>
 
             <article class="card">
-              <h4>Security & Cryptography</h4>
-              <p>
-                Development of authentication and access control systems, with
-                attention to boundary enforcement and principles of least
-                privilege.
-              </p>
+              <h4>Identity &amp; Access Control</h4>
+
+              <div>
+                <p>
+                  Implementation of authentication, identity, and access control
+                  systems across cloud, platform, and application boundaries.
+                </p>
+              </div>
 
               <ul>
                 <li>identity provider &amp; SSO integration</li>
                 <li>token-based authentication flows</li>
-                <li>secure password handling</li>
+                <li>password storage &amp; validation</li>
                 <li>symmetric &amp; asymmetric cryptography</li>
               </ul>
 
               <ul class="tags">
+                <li>AWS IAM + SSO</li>
+                <li>Okta</li>
                 <li>OAuth</li>
                 <li>OIDC</li>
+                <li>SAML</li>
                 <li>JOSE/JWT</li>
-                <li>AWS IAM + SSO</li>
                 <li>K8s RBAC</li>
-                <li>Okta</li>
-                <li>1Password</li>
                 <li>bcrypt</li>
               </ul>
             </article>
           </div>
 
-          <p class="footnote">
+          <aside>
             Additional experience includes occasional frontend work with HTML,
             CSS, React, and Next.js, as well as past involvement in embedded
             systems, C++, and electronics hardware design.
-          </p>
+          </aside>
         </div>
       </section>
 
-      <!-- section id="employment">
+      <section id="employment">
         <h3><a href="#employment">Employment History</a></h3>
-        <div class="details">
+        <div class="cards">
           <article>
             <div class="card">
-              <h4>BetSecure</h4>
+              <div class="organization">
+                <h4>BetSecure</h4>
+                <h6>iGaming Geolocation, Compliance &amp; Fraud Prevention</h6>
+              </div>
+
               <div class="role">
                 <h5>Principal Software Engineer</h5>
                 <h6>Nov 2021 &mdash; present &bullet; 3.5 yrs</h6>
-                <p>&mdash;</p>
+              </div>
+
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
               </div>
             </div>
           </article>
 
           <article>
             <div class="card">
-              <h4>Codeworx 3</h4>
+              <div class="organisation">
+                <h4>Codeworx</h4>
+                <h6>Online poker &amp; Sports Betting</h6>
+              </div>
+
               <div class="role">
                 <h5>Software Development Manager</h5>
                 <h6>Dec 2008 &mdash; Nov 2021 &bullet; 13 yrs</h6>
-                <p>&mdash;</p>
               </div>
+
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+
+              <ul class="tags">
+                <li>Go</li>
+                <li>PHP</li>
+                <li>Composer</li>
+                <li>PHPUnit</li>
+                <li>PostgreSQL</li>
+                <li>CouchDB</li>
+                <li>gRPC</li>
+                <li>Docker</li>
+              </ul>
 
               <div class="role">
                 <h5>Software Developer</h5>
                 <h6>Jul 2006 &mdash; Dec 2008 &bullet; 2.5yrs</h6>
-                <p>&mdash;</p>
               </div>
+
+              <p>
+                Joined an established team of PHP developers responsible for the
+                backoffice component of the company's online poker and casino
+                gaming platform, which powered the
+                <em>Poker.com</em> brand during the height of poker's global
+                popularity.
+              </p>
+
+              <p>
+                The system included reporting, player management, and
+                operational tools used by executives, customer support,
+                marketing staff, and fraud analysts.
+              </p>
+
+              <p>
+                Fostered collaboration with the team responsible for the Java
+                gameplay backend, ensuring core functionality was accessible to
+                operations staff through the backoffice system. This enabled
+                complex gameplay and promotions configuration without developer
+                involvement, significantly reducing toil and increasing
+                operational flexibility.
+              </p>
+
+              <ul class="tags">
+                <li>PHP</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>MySQL</li>
+                <li>SQLite</li>
+                <li>REST</li>
+                <li>SOAP</li>
+                <li>Stored Procedures</li>
+                <li>Triggers</li>
+              </ul>
             </div>
           </article>
 
           <article>
             <div class="card">
-              <h4>Managed Solutions</h4>
+              <div class="organization">
+                <h4>Managed Solutions</h4>
+                <h6>On-premises IT services &amp; internet service provider</h6>
+              </div>
+
               <div class="role">
                 <h5>Software Developer</h5>
                 <h6>Feb 2005 &mdash; Jul 2006 &bullet; 1.5 yrs</h6>
-                <p>&mdash;</p>
               </div>
+
+              <p>
+                Developed a job management system for mobile IT technicians,
+                providing task scheduling, time tracking, and invoicing features
+                across desktop, early smartphone and PDA devices.
+              </p>
+
+              <p>
+                Worked largely independently under the technical guidance of a
+                skilled Python developer. Collaborated with the general manager,
+                who acted as product owner, to align development with day-to-day
+                business operations.
+              </p>
+
+              <ul class="tags">
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>PostgreSQL</li>
+              </ul>
             </div>
           </article>
 
           <article>
             <div class="card">
-              <h4>Oz Servers</h4>
-              <h5>Software Development Manager</h5>
-              <div class="role">
-                <h6>2002 &mdash; Feb 2005 &bullet; 3.5 yrs</h6>
-                <p>&mdash;</p>
+              <div class="organization">
+                <h4>Oz Servers</h4>
+                <h6>Web hosting &amp; Dedicated Servers</h6>
               </div>
+
+              <div class="role">
+                <h5>Software Developer</h5>
+                <h6>2002 &mdash; Feb 2005 &bullet; 3.5 yrs</h6>
+              </div>
+
+              <p>
+                Built a comprehensive platform to replace off-the-shelf products
+                as the company transitioned from a shared hosting provider to
+                operating its own data centre that offered managed servers,
+                unmanaged dedicated servers and co-location services.
+              </p>
+
+              <p>
+                The project was developed by a two-person team, where I held
+                primary responsibility for the system's architecture and design.
+                Consulted directly with the general manager, customer support,
+                sales and technicians to ensure the platform met their
+                respective requirements.
+              </p>
+
+              <p>
+                The system unified a broad feature set supporting every aspect
+                of daily operations, customer interaction, and server
+                management.
+              </p>
+
+              <ul>
+                <li>customer-facing and backoffice user interfaces</li>
+                <li>content management</li>
+                <li>product pricing &amp; web ordering</li>
+                <li>issue management</li>
+                <li>customer billing</li>
+                <li>domain registration & DNS zone management</li>
+                <li>SSL certificate management</li>
+                <li>IP address management</li>
+                <li>data usage tracking</li>
+                <li>monitoring &amp; alerting</li>
+                <li>hardware power control &amp; remote restarts</li>
+                <li>inventory tracking</li>
+                <li>asset location</li>
+              </ul>
+
+              <aside>
+                The platform remained in active use for many years after my
+                departure, supporting business operations until the company’s
+                acquisition by <em>Servers Australia</em> in 2017.
+              </aside>
+
+              <ul class="tags">
+                <li>PHP</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>MySQL</li>
+                <li>C++</li>
+                <li>Linux</li>
+                <li>DNS</li>
+                <li>SSL/TLS</li>
+                <li>iptables</li>
+                <li>DHCP</li>
+                <li>SNMP</li>
+              </ul>
             </div>
           </article>
         </div>
-      </section -->
+      </section>
     </main>
   </body>
 </html>
