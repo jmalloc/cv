@@ -295,11 +295,11 @@ main {
     padding: var(--gap);
 
     border-radius: 1em;
-    box-shadow: 0 0 var(--small-gap) var(--primary-muted);
+    border-bottom: 0.1em solid var(--primary-muted);
 
     background-image: linear-gradient(
-      -20deg,
-      transparent 20%,
+      -10deg,
+      transparent 0%,
       var(--primary-muted) 100%
     );
 
