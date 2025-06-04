@@ -128,7 +128,7 @@
                 </p>
               </div>
 
-              <ul>
+              <ul class="bullets">
                 <li>event-driven systems</li>
                 <li>event sourcing</li>
                 <li>domain-driven design (DDD)</li>
@@ -160,7 +160,7 @@
                 </p>
               </div>
 
-              <ul>
+              <ul class="bullets">
                 <li>relational &amp; document modelling</li>
                 <li>index &amp; query optimisation</li>
                 <li>event retention strategies</li>
@@ -189,7 +189,7 @@
                 </p>
               </div>
 
-              <ul>
+              <ul class="bullets">
                 <li>custom command-line tooling</li>
                 <li>CI/CD workflows</li>
                 <li>zero-downtime deployments</li>
@@ -219,7 +219,7 @@
                 </p>
               </div>
 
-              <ul>
+              <ul class="bullets">
                 <li>infrastructure as code (IAC)</li>
                 <li>GitOps workflows</li>
                 <li>internal developer portals</li>
@@ -248,7 +248,7 @@
                 </p>
               </div>
 
-              <ul>
+              <ul class="bullets">
                 <li>structured logging &amp; trace correlation</li>
                 <li>metric collection</li>
                 <li>automated health checks</li>
@@ -272,7 +272,7 @@
                 </p>
               </div>
 
-              <ul>
+              <ul class="bullets">
                 <li>identity provider &amp; SSO integration</li>
                 <li>token-based authentication flows</li>
                 <li>password storage &amp; validation</li>
@@ -302,50 +302,62 @@
 
       <section id="employment">
         <h3><a href="#employment">Employment History</a></h3>
-        <div class="cards">
-          <article>
-            <div class="card">
-              <div class="organization">
-                <h4>BetSecure</h4>
-                <h6>iGaming Geolocation, Compliance &amp; Fraud Prevention</h6>
-              </div>
-
-              <div class="role">
-                <h5>Principal Software Engineer</h5>
-                <h6>Nov 2021 &mdash; present &bullet; 3.5 yrs</h6>
-              </div>
-
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
+        <div class="timeline">
+          <article class="org">
+            <div class="title">
+              <h4>BetSecure</h4>
+              <h6>iGaming Geolocation, Compliance &amp; Fraud Prevention</h6>
             </div>
           </article>
 
-          <article>
-            <div class="card">
-              <div class="organisation">
-                <h4>Codeworx</h4>
-                <h6>Online poker &amp; Sports Betting</h6>
-              </div>
+          <article class="role">
+            <div class="title">
+              <h4>Principal Software Engineer</h4>
+              <h6>Nov 2021 &mdash; present &bullet; 3.5 years</h6>
+            </div>
 
-              <div class="role">
-                <h5>Software Development Manager</h5>
-                <h6>Dec 2008 &mdash; Nov 2021 &bullet; 13 yrs</h6>
-              </div>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
 
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
+              <ul class="tags">
+                <li>Go</li>
+                <li>gRPC</li>
+              </ul>
+            </div>
+
+            <aside>
+              BetSecure is a sister company of <em>Codeworx</em>, where I was
+              employed prior. During this time I continued to work with
+              <em>Codeworx</em> team members to further development of the Dogma
+              ecosystem and provide support as needed.
+            </aside>
+          </article>
+
+          <article class="org">
+            <div class="title">
+              <h4>Codeworx</h4>
+              <h6>Online poker &amp; Sports Betting</h6>
+            </div>
+          </article>
+
+          <article class="role">
+            <div class="title">
+              <h4>Software Development Manager</h4>
+              <h6>Dec 2008 &mdash; Nov 2021 &bullet; 13 years</h6>
+            </div>
+
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
 
               <ul class="tags">
                 <li>Go</li>
@@ -357,12 +369,16 @@
                 <li>gRPC</li>
                 <li>Docker</li>
               </ul>
+            </div>
+          </article>
 
-              <div class="role">
-                <h5>Software Developer</h5>
-                <h6>Jul 2006 &mdash; Dec 2008 &bullet; 2.5yrs</h6>
-              </div>
+          <article class="role">
+            <div class="title">
+              <h4>Software Developer</h4>
+              <h6>Jul 2006 &mdash; Dec 2008 &bullet; 2.5 years</h6>
+            </div>
 
+            <div class="content">
               <p>
                 Joined an established team of PHP developers responsible for the
                 backoffice component of the company's online poker and casino
@@ -378,121 +394,117 @@
               </p>
 
               <p>
-                Fostered collaboration with the team responsible for the Java
-                gameplay backend, ensuring core functionality was accessible to
-                operations staff through the backoffice system. This enabled
-                complex gameplay and promotions configuration without developer
-                involvement, significantly reducing toil and increasing
-                operational flexibility.
+                Fostered collaboration with the team responsible for the
+                player-facing gameplay components, ensuring core functionality
+                was accessible to operations staff through the backoffice
+                system. This allowed operations staff to configure complex
+                gameplay and promotional aspects without developer involvement,
+                significantly reducing toil and increasing operational
+                flexibility.
               </p>
 
               <ul class="tags">
                 <li>PHP</li>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>HTML + CSS</li>
                 <li>MySQL</li>
-                <li>SQLite</li>
                 <li>REST</li>
                 <li>SOAP</li>
                 <li>Stored Procedures</li>
                 <li>Triggers</li>
+                <li>Linux</li>
+                <li>FreeBSD</li>
+                <li>SVN</li>
               </ul>
             </div>
           </article>
 
-          <article>
-            <div class="card">
-              <div class="organization">
-                <h4>Managed Solutions</h4>
-                <h6>On-premises IT services &amp; internet service provider</h6>
-              </div>
+          <article class="org">
+            <div class="title">
+              <h4>Managed Solutions</h4>
+              <h6>IT services &amp; internet service provider</h6>
+            </div>
+          </article>
 
-              <div class="role">
-                <h5>Software Developer</h5>
-                <h6>Feb 2005 &mdash; Jul 2006 &bullet; 1.5 yrs</h6>
-              </div>
+          <article class="role">
+            <div class="title">
+              <h4>Software Developer</h4>
+              <h6>Feb 2005 &mdash; Jul 2006 &bullet; 1.5 years</h6>
+            </div>
 
+            <div class="content">
               <p>
-                Developed a job management system for mobile IT technicians,
-                providing task scheduling, time tracking, and invoicing features
-                across desktop, early smartphone and PDA devices.
+                Developed a job management system for electricians and mobile IT
+                technicians, providing task scheduling, time tracking, and
+                invoicing features across desktop and early smartphone devices.
               </p>
 
               <p>
-                Worked largely independently under the technical guidance of a
+                Worked largely independently with technical guidance from a
                 skilled Python developer. Collaborated with the general manager,
-                who acted as product owner, to align development with day-to-day
-                business operations.
+                who acted as product owner, to keep features aligned with
+                business processes.
               </p>
 
               <ul class="tags">
                 <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>HTML + CSS</li>
                 <li>PostgreSQL</li>
+                <li>Linux</li>
+                <li>SVN</li>
               </ul>
             </div>
           </article>
 
-          <article>
-            <div class="card">
-              <div class="organization">
-                <h4>Oz Servers</h4>
-                <h6>Web hosting &amp; Dedicated Servers</h6>
-              </div>
+          <article class="org">
+            <div class="title">
+              <h4>Oz Servers</h4>
+              <h6>Web hosting &amp; Dedicated Servers</h6>
+            </div>
+          </article>
 
-              <div class="role">
-                <h5>Software Developer</h5>
-                <h6>2002 &mdash; Feb 2005 &bullet; 3.5 yrs</h6>
-              </div>
+          <article class="role">
+            <div class="title">
+              <h4>Software Developer</h4>
+              <h6>2002 &mdash; Feb 2005 &bullet; 3.5 years</h6>
+            </div>
 
+            <div class="content">
               <p>
-                Built a comprehensive platform to replace off-the-shelf products
-                as the company transitioned from a shared hosting provider to
-                operating its own data centre that offered managed servers,
-                unmanaged dedicated servers and co-location services.
+                Built a comprehensive web-based business operations platform to
+                support the company's expansion from shared hosting resale into
+                dedicated server and co-location services, operated from its own
+                data centres.
               </p>
 
               <p>
-                The project was developed by a two-person team, where I held
-                primary responsibility for the system's architecture and design.
-                Consulted directly with the general manager, customer support,
-                sales and technicians to ensure the platform met their
-                respective requirements.
+                Developed by a two-person team, I held primary responsibility
+                for architecture and design. We worked closely with the
+                co-founders, customer support, sales, and hardware technicians
+                to ensure the platform's features aligned with their processes.
               </p>
 
               <p>
-                The system unified a broad feature set supporting every aspect
-                of daily operations, customer interaction, and server
-                management.
+                The system boasted a broad feature set supporting all aspects of
+                the company's daily operations.
               </p>
 
-              <ul>
-                <li>customer-facing and backoffice user interfaces</li>
-                <li>content management</li>
-                <li>product pricing &amp; web ordering</li>
-                <li>issue management</li>
-                <li>customer billing</li>
-                <li>domain registration & DNS zone management</li>
+              <ul class="bullets">
+                <li>website content management</li>
+                <li>pricing &amp; online ordering</li>
+                <li>issue tracking</li>
+                <li>invoice generation &amp; credit card processing</li>
+                <li>domain registration &amp; DNS record management</li>
+                <li>public IP address allocation</li>
                 <li>SSL certificate management</li>
-                <li>IP address management</li>
-                <li>data usage tracking</li>
-                <li>monitoring &amp; alerting</li>
-                <li>hardware power control &amp; remote restarts</li>
-                <li>inventory tracking</li>
-                <li>asset location</li>
+                <li>traffic metering, billing &amp; quota enforcement</li>
+                <li>service monitoring &amp; alerting</li>
+                <li>remote power monitoring &amp; restarts</li>
+                <li>inventory &amp; physical asset tracking</li>
               </ul>
-
-              <aside>
-                The platform remained in active use for many years after my
-                departure, supporting business operations until the company’s
-                acquisition by <em>Servers Australia</em> in 2017.
-              </aside>
 
               <ul class="tags">
                 <li>PHP</li>
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>HTML + CSS</li>
                 <li>MySQL</li>
                 <li>C++</li>
                 <li>Linux</li>
@@ -503,6 +515,12 @@
                 <li>SNMP</li>
               </ul>
             </div>
+
+            <aside>
+              The platform remained in active use for many years after my
+              departure, supporting business operations until the company’s
+              acquisition by <em>Servers Australia</em> in 2017.
+            </aside>
           </article>
         </div>
       </section>
