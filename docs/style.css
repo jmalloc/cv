@@ -6,13 +6,13 @@
   --splash-color-b: #e55;
   --splash-color-c: var(--primary-color);
 
-  --bg-color-a: #bbb;
-  --bg-color-b: #e7edf0;
-  --bg-color-c: green;
-  --shadow-color: red;
+  --bg-color-a: #f0f0f0;
+  --bg-color-b: #f3f3ff;
+  --bg-color-c: #ffffffcc;
+  --shadow-color: #eee;
 
-  --title-color: #556;
-  --text-color: #556;
+  --title-color: #334;
+  --text-color: #445;
   --text-color-muted: #99a;
 }
 
@@ -150,7 +150,6 @@ aside {
 
 .amp {
   font-size: 82%;
-  color: var(--text-color-muted);
 }
 
 .splash {
