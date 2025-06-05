@@ -5,19 +5,24 @@
   --splash-color-a: var(--secondary-color);
   --splash-color-b: #e55;
   --splash-color-c: var(--primary-color);
+  --splash-opacity: 50%;
 
   --bg-color-a: #f0f0f0;
   --bg-color-b: #f3f3ff;
-  --bg-color-c: #ffffffcc;
-  --shadow-color: #eee;
+  --bg-color-c: #fbfbffcc;
+  --shadow-color: #fbfbff;
 
   --title-color: #334;
   --text-color: #445;
   --text-color-muted: #99a;
+
+  --avatar-border-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --splash-opacity: 40%;
+
     --bg-color-a: #112;
     --bg-color-b: #091c26;
     --bg-color-c: #223c;
@@ -26,6 +31,8 @@
     --title-color: #dde;
     --text-color: #aab;
     --text-color-muted: #778;
+
+    --avatar-border-color: #dde;
   }
 }
 
@@ -172,7 +179,7 @@ aside {
   );
 
   filter: blur(var(--blur));
-  opacity: 40%;
+  opacity: var(--splash-opacity);
 
   z-index: -1;
   pointer-events: none;
@@ -188,7 +195,7 @@ aside {
   margin: 0 auto;
 
   border-radius: 50%;
-  outline: calc(var(--avatar-size) / 40) solid var(--title-color);
+  outline: calc(var(--avatar-size) / 40) solid var(--avatar-border-color);
   box-shadow: var(--shadow);
 }
 
