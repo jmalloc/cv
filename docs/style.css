@@ -7,10 +7,10 @@
   --splash-color-c: var(--primary-color);
   --splash-opacity: 50%;
 
-  --bg-color-a: #f0f0f0;
-  --bg-color-b: #f3f3ff;
-  --bg-color-c: #fbfbffcc;
-  --shadow-color: #fbfbff;
+  --bg-color-a: #fff;
+  --bg-color-b: #eef;
+  --bg-color-c: #e8f0ff;
+  --shadow-color: #eef;
 
   --title-color: #334;
   --text-color: #445;
@@ -25,7 +25,7 @@
 
     --bg-color-a: #112;
     --bg-color-b: #091c26;
-    --bg-color-c: #223c;
+    --bg-color-c: #223a;
     --shadow-color: #001;
 
     --title-color: #dde;
@@ -44,7 +44,8 @@
   --avatar-size: 6em;
   --title-size: var(--avatar-size);
 
-  --shadow: 0.03em 0.03em 0.03em var(--shadow-color);
+  --text-shadow: 0.03em 0.03em 0.03em var(--shadow-color);
+  --box-shadow: 0 0 var(--gap-small) var(--bg-color-b);
 
   --max-width: 940px;
   --columns: 3;
@@ -72,9 +73,10 @@ body {
 
   background: linear-gradient(
     30deg,
-    var(--bg-color-a) 25%,
-    var(--bg-color-b) 75%
+    var(--bg-color-a) 0%,
+    var(--bg-color-b) 100%
   );
+  background-attachment: fixed;
 
   font-family: "Inter", sans-serif;
   font-size: 12pt;
@@ -114,7 +116,7 @@ h6 {
   margin: 0;
 
   color: var(--primary-color);
-  text-shadow: var(--shadow);
+  text-shadow: var(--text-shadow);
 
   font-family: "Jura", sans-serif;
   line-height: 1em;
@@ -192,11 +194,13 @@ aside {
 .avatar {
   grid-area: avatar;
   height: var(--avatar-size);
-  margin: 0 auto;
+  margin: var(--gap-small) auto 0 auto;
 
   border-radius: 50%;
   outline: calc(var(--avatar-size) / 40) solid var(--avatar-border-color);
-  box-shadow: var(--shadow);
+  box-shadow: var(--box-shadow);
+
+  filter: contrast(1.1) brightness(1.1);
 }
 
 header {
@@ -225,7 +229,7 @@ nav {
 
   font-family: "Jura", sans-serif;
   font-size: 1.1em;
-  text-shadow: var(--shadow);
+  text-shadow: var(--text-shadow);
 
   a {
     color: var(--text-color);
@@ -343,7 +347,7 @@ ul.tags {
       var(--primary-color) 750%
     );
 
-    text-shadow: var(--shadow);
+    text-shadow: var(--text-shadow);
     white-space: nowrap;
   }
 }
@@ -372,6 +376,7 @@ ul.bullets {
 
     border-radius: var(--gap-medium);
     background: var(--bg-color-c);
+    box-shadow: var(--box-shadow);
 
     :has(+ ul.tags) {
       flex-grow: 1;
@@ -388,6 +393,7 @@ ul.bullets {
     padding: var(--gap-medium);
     border-radius: var(--gap-medium);
     background: var(--bg-color-c);
+    box-shadow: var(--box-shadow);
   }
 
   .role {
@@ -399,7 +405,13 @@ ul.bullets {
     padding-left: var(--gap-medium);
 
     border-radius: var(--gap-medium);
-    border-left: 0.25em solid var(--bg-color-c);
+    border-left: 0.35em solid var(--bg-color-c);
+    background: linear-gradient(
+      to left,
+      var(--bg-color-c) 0%,
+      transparent 100%
+    );
+    box-shadow: var(--box-shadow);
 
     h4 {
       color: var(--primary-color);
