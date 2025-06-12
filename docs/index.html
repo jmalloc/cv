@@ -22,14 +22,6 @@
     />
 
     <link href="style.css" rel="stylesheet" />
-
-    <script>
-      window.onload = function () {
-        for (elem of document.querySelectorAll("p, li")) {
-          elem.innerHTML = elem.innerHTML.replace(/ &amp; /, ' <span class="amp">&amp;</span> ');
-        }
-      };
-    </script>
   </head>
 
   <body>
@@ -43,7 +35,7 @@
     </header>
 
     <nav>
-      <ul class="contact">
+      <ul class="links">
         <li>
           <a href="https://maps.app.goo.gl/hyKU1jCwBRrNoh1z9">
             <svg><use href="images/icons.svg#location"></use></svg>
@@ -83,7 +75,13 @@
 
     <main>
       <section id="profile">
-        <h3><a href="#profile">Profile</a></h3>
+        <h3>
+          <a href="#profile">
+            <svg><use href="images/icons.svg#link"></use></svg>
+            Profile
+          </a>
+        </h3>
+
         <div>
           <p>
             I’m a software engineer with <strong>over 20 years experience</strong> designing and building backend
@@ -113,7 +111,13 @@
       </section>
 
       <section id="skills">
-        <h3><a href="#skills">Skills + Experience</a></h3>
+        <h3>
+          <a href="#skills">
+            <svg><use href="images/icons.svg#link"></use></svg>
+            Skills + Experience
+          </a>
+        </h3>
+
         <div>
           <div class="cards">
             <article>
@@ -224,6 +228,7 @@
               </ul>
 
               <ul class="tags">
+                <li>Git</li>
                 <li>Kubernetes</li>
                 <li>AWS</li>
                 <li>Karpenter</li>
@@ -293,11 +298,22 @@
       </section>
 
       <section id="employment">
-        <h3><a href="#employment">Employment History</a></h3>
+        <h3>
+          <a href="#employment">
+            <svg><use href="images/icons.svg#link"></use></svg>
+            Employment History
+          </a>
+        </h3>
+
         <div>
-          <article>
+          <article id="betsecure">
             <div>
-              <h4>BetSecure</h4>
+              <h4>
+                <a href="#betsecure">
+                  BetSecure
+                  <svg><use href="images/icons.svg#link"></use></svg>
+                </a>
+              </h4>
               <h6>iGaming Geolocation, Compliance &amp; Fraud Prevention</h6>
             </div>
 
@@ -310,15 +326,14 @@
               <p>
                 Shared responsibility for technical and product leadership across a startup delivering “Compliance as a
                 Service” to online gambling operators. The platform enforced state-specific geolocation and regulatory
-                controls required by United States legislation. <em>BetSecure</em> is owned by the parent company of
-                <em>Codeworx</em>, my previous employer.
+                controls required by United States legislation. BetSecure shares a parent company with
+                <a href="#codeworx">Codeworx</a>, my previous employer.
               </p>
 
               <p>
                 Recruited engineers to form cross-functional teams with frontend, backend, mobile, and DevOps skillsets.
-                Established remote <a href="https://agilealliance.org/glossary/mob-programming/">mob programming</a> as
-                a core practice. Eliminated pull requests and asynchronous reviews in favour of continuous
-                collaboration, reducing overhead and context switching.
+                Established remote mob programming as a core practice. Eliminated pull requests and asynchronous reviews
+                in favour of continuous collaboration, reducing overhead and context switching.
               </p>
 
               <p>
@@ -329,13 +344,13 @@
 
               <ul class="bullets">
                 <li>mentored engineers in distributed design, event-sourcing, read-model projection, and CQRS</li>
-                <li>guided architecture across teams using domain-driven design (DDD) principals</li>
+                <li>guided architecture across teams using domain-driven design (DDD) principles</li>
                 <li>interpreted regulatory documents to ensure systems adhere to state-specific compliance rules</li>
                 <li>built a Kubernetes-based developer platform with on-demand environments provisioned via Slack</li>
                 <li>developed tools for in-cluster development using real domains, certificates and cloud services</li>
                 <li>
                   led ongoing development of <a href="#dogma">Dogma</a> in collaboration with
-                  <em>Codeworx</em> engineers.
+                  <a href="#codeworx">Codeworx</a> engineers.
                 </li>
               </ul>
 
@@ -357,15 +372,20 @@
               </ul>
 
               <aside>
-                My role at <em>BetSecure</em> concludes on 1st August 2025 due to the parent company winding down its
-                Australian operations for strategic reasons unrelated to team performance or product quality.
+                My role at BetSecure concludes on 1st August 2025 due to the parent company winding down its Australian
+                operations for strategic reasons unrelated to team performance or product quality.
               </aside>
             </section>
           </article>
 
-          <article>
+          <article id="codeworx">
             <div>
-              <h4>Codeworx</h4>
+              <h4>
+                <a href="#codeworx">
+                  Codeworx
+                  <svg><use href="images/icons.svg#link"></use></svg>
+                </a>
+              </h4>
               <h6>Online poker &amp; Sports Betting</h6>
             </div>
 
@@ -390,7 +410,11 @@
 
               <ul class="bullets">
                 <li>introduced unit testing, automated builds, and code coverage reporting to PHP codebases</li>
-                <li>led early adoption of <a href="https://getcomposer.org">Composer</a> to modularise shared code</li>
+                <li>
+                  advocated for company-wide move from Subversion to Git, improving branching performance and developer
+                  experience
+                </li>
+                <li>led early adoption of Composer to modularise shared code</li>
                 <li>authored <a href="#recoil">Recoil</a>, an asynchronous coroutine library for PHP 7</li>
                 <li>championed adoption of Go to overcome limitations in PHP’s concurrency and process model</li>
                 <li>developed <a href="#dogma">Dogma</a>, an opinionated event-sourcing framework for Go</li>
@@ -447,9 +471,14 @@
             </section>
           </article>
 
-          <article>
+          <article id="managed-solutions">
             <div>
-              <h4>Managed Solutions</h4>
+              <h4>
+                <a href="#managed-solutions">
+                  Managed Solutions
+                  <svg><use href="images/icons.svg#link"></use></svg>
+                </a>
+              </h4>
               <h6>IT services &amp; internet service provider</h6>
             </div>
 
@@ -488,9 +517,14 @@
             </section>
           </article>
 
-          <article>
+          <article id="oz-servers">
             <div>
-              <h4>Oz Servers</h4>
+              <h4>
+                <a href="#oz-servers">
+                  Oz Servers
+                  <svg><use href="images/icons.svg#link"></use></svg>
+                </a>
+              </h4>
               <h6>Web hosting &amp; Dedicated Servers</h6>
             </div>
 
@@ -539,18 +573,29 @@
       </section>
 
       <section id="open-source">
-        <h3><a href="#open-source">Open Source</a></h3>
+        <h3>
+          <a href="#open-source">
+            <svg><use href="images/icons.svg#link"></use></svg>
+            Open Source
+          </a>
+        </h3>
+
         <div>
           <div class="cards">
-            <article>
-              <div id="dogma">
-                <h4>Dogma</h4>
+            <article id="dogma">
+              <div>
+                <h4>
+                  <a href="#dogma">
+                    Dogma
+                    <svg><use href="images/icons.svg#link"></use></svg>
+                  </a>
+                </h4>
                 <h6>Event-sourcing ecosystem for Go</h6>
               </div>
 
               <p>Dogma is a comprehensive toolkit for building message-based, event-sourced applications in Go.</p>
 
-              <ul class="contact">
+              <ul class="links">
                 <li>
                   <a href="https://github.com/dogmatiq/dogma#readme">
                     <svg><use href="images/icons.svg#github"></use></svg>
@@ -560,9 +605,14 @@
               </ul>
             </article>
 
-            <article>
-              <div id="recoil">
-                <h4>Recoil</h4>
+            <article id="recoil">
+              <div>
+                <h4>
+                  <a href="#recoil">
+                    Recoil
+                    <svg><use href="images/icons.svg#link"></use></svg>
+                  </a>
+                </h4>
                 <h6>Asynchronous coroutines for PHP 7</h6>
               </div>
 
@@ -571,7 +621,7 @@
                 syntax.
               </p>
 
-              <ul class="contact">
+              <ul class="links">
                 <li>
                   <a href="https://github.com/recoilphp/recoil#readme">
                     <svg><use href="images/icons.svg#github"></use></svg>
@@ -583,13 +633,18 @@
 
             <article id="grit">
               <div>
-                <h4>Grit</h4>
+                <h4>
+                  <a href="#grit">
+                    Grit
+                    <svg><use href="images/icons.svg#link"></use></svg>
+                  </a>
+                </h4>
                 <h6>CLI for management of Git clones</h6>
               </div>
 
               <p>Grit indexes your local Git clones, with fast directory switching &amp; autocomplete.</p>
 
-              <ul class="contact">
+              <ul class="links">
                 <li>
                   <a href="https://github.com/jmalloc/grit#readme">
                     <svg><use href="images/icons.svg#github"></use></svg>
@@ -603,7 +658,13 @@
       </section>
 
       <section id="education">
-        <h3><a href="#education">Education</a></h3>
+        <h3>
+          <a href="#education">
+            <svg><use href="images/icons.svg#link"></use></svg>
+            Education
+          </a>
+        </h3>
+
         <div>
           <article>
             <div>
@@ -623,17 +684,23 @@
       </section>
 
       <section id="references">
-        <h3><a href="#references">References</a></h3>
+        <h3>
+          <a href="#references">
+            <svg><use href="images/icons.svg#link"></use></svg>
+            References
+          </a>
+        </h3>
+
         <div>
           <div class="cards">
             <article>
               <div>
                 <h4>Dan Henke</h4>
-                <h5>BetSecure</h5>
+                <h5><a href="#betsecure">BetSecure</a></h5>
                 <h6>General Manager &bullet; manager</h6>
               </div>
 
-              <ul class="contact">
+              <ul class="links">
                 <li>
                   <a href="mailto:contact@danhenke.au">
                     <svg><use href="images/icons.svg#email"></use></svg>
@@ -652,11 +719,11 @@
             <article>
               <div>
                 <h4>Erin Millard</h4>
-                <h5>BetSecure</h5>
+                <h5><a href="#betsecure">BetSecure</a></h5>
                 <h6>Principal Software Engineer &bullet; peer</h6>
               </div>
 
-              <ul class="contact">
+              <ul class="links">
                 <li>
                   <a href="mailto:contact@erin.au">
                     <svg><use href="images/icons.svg#email"></use></svg>
@@ -676,11 +743,11 @@
             <article>
               <div>
                 <h4>Danil Petrov</h4>
-                <h5>Codeworx &amp; BetSecure</h5>
+                <h5><a href="#codeworx">Codeworx</a> &amp; <a href="#betsecure">BetSecure</a></h5>
                 <h6>Senior Software Engineer &bullet; direct report</h6>
               </div>
 
-              <ul class="contact">
+              <ul class="links">
                 <li>
                   <a href="mailto:danilpetrovvi@gmail.com">
                     <svg><use href="images/icons.svg#email"></use></svg>

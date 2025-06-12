@@ -129,6 +129,37 @@ h6 {
   font-weight: 600;
   line-height: 1em;
   text-transform: uppercase;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    svg {
+      display: none;
+      width: 0.7em;
+      height: 0.7em;
+      fill: var(--text-strong);
+    }
+  }
+
+  a:hover {
+    color: inherit;
+
+    svg {
+      display: inline;
+    }
+  }
+}
+
+h3 {
+  align-self: start;
+  text-align: right;
+  position: sticky;
+  top: 0;
+
+  padding-top: 0.5em;
+  font-size: 90%;
+  writing-mode: sideways-lr;
 }
 
 h4 {
@@ -151,13 +182,13 @@ h6 {
 }
 
 a {
-  text-decoration: none;
-  color: $color-a;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  color: inherit;
 }
 
 a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  color: var(--text-strong);
 }
 
 strong {
@@ -183,7 +214,7 @@ aside {
   line-height: 1.5em;
 }
 
-ul.contact {
+ul.links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -204,7 +235,7 @@ ul.contact {
     }
 
     a {
-      color: var(--text);
+      text-decoration: none;
 
       span {
         margin-left: $gap-sm;
@@ -214,7 +245,7 @@ ul.contact {
 }
 
 @media (max-width: $device-md) {
-  ul.contact a span {
+  ul.links a span {
     display: none;
   }
 }
@@ -275,6 +306,11 @@ article {
   }
 }
 
+article:target {
+  scroll-margin-top: $gap-lg;
+  box-shadow: 0 0 $gap-sm $color-a;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
@@ -282,7 +318,7 @@ article {
 
   > article {
     :has(+ ul.tags),
-    :has(+ ul.contact) {
+    :has(+ ul.links) {
       flex-grow: 1;
     }
 
@@ -290,14 +326,10 @@ article {
       margin-left: 0;
     }
 
-    ul.contact {
+    ul.links {
       flex-direction: column;
     }
   }
-}
-
-.amp {
-  font-size: 82%;
 }
 
 .splash {
@@ -358,7 +390,7 @@ nav {
   flex-direction: column;
   font-size: 1.1em;
 
-  ul.contact li svg {
+  ul.links li svg {
     fill: $color-b;
   }
 }
@@ -389,17 +421,6 @@ main {
     display: grid;
     grid-template-columns: 0.9em 1fr;
     gap: $gap-lg;
-
-    h3 {
-      align-self: start;
-      text-align: right;
-      position: sticky;
-      top: 0;
-
-      padding-top: 0.5em;
-      font-size: 90%;
-      writing-mode: sideways-lr;
-    }
 
     > div {
       display: flex;
