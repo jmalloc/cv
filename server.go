@@ -5,11 +5,9 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	"os/exec"
 	"os/signal"
 	"syscall"
-
-	"golang.org/x/sync/errgroup"
+	"time"
 )
 
 func main() {
@@ -27,36 +25,24 @@ func run() error {
 	)
 	defer cancel()
 
-	g, ctx := errgroup.WithContext(ctx)
+	s := &http.Server{
+		Addr:    ":8080",
+		Handler: http.FileServer(http.Dir("./docs")),
+	}
 
-	g.Go(func() error {
-		sass := exec.CommandContext(
-			ctx,
-			"sass",
-			"--watch",
-			"--style", "compressed",
-			"style.scss", "docs/style.css",
-		)
+	go func() {
+		<-ctx.Done()
 
-		sass.Stdout = os.Stdout
-		sass.Stderr = os.Stderr
+		ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+		defer cancel()
 
-		return sass.Run()
-	})
+		s.Shutdown(ctx)
+		s.Close()
+	}()
 
-	g.Go(func() error {
-		s := &http.Server{
-			Addr:    ":8080",
-			Handler: http.FileServer(http.Dir("./docs")),
-		}
+	if err := s.ListenAndServe(); err != http.ErrServerClosed {
+		return err
+	}
 
-		go func() {
-			<-ctx.Done()
-			s.Close()
-		}()
-
-		return s.ListenAndServe()
-	})
-
-	return g.Wait()
+	return nil
 }
