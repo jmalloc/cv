@@ -113,19 +113,7 @@ h6 {
 }
 
 h3 {
-  align-self: start;
-  text-align: right;
-
-  padding-top: 0.5em;
   font-size: 90%;
-  writing-mode: sideways-lr;
-}
-
-@media screen {
-  h3 {
-    position: sticky;
-    top: 0;
-  }
 }
 
 h4 {
@@ -249,7 +237,8 @@ ul.bullets {
   }
 }
 
-article {
+article,
+section section {
   padding: var(--gap-md);
   border-radius: var(--gap-md);
   background: var(--bg-c);
@@ -259,12 +248,7 @@ article {
   flex-direction: column;
   gap: var(--gap-md);
 
-  > .heading {
-    break-inside: avoid;
-    break-after: avoid;
-  }
-
-  > section {
+  > article {
     display: flex;
     flex-direction: column;
     gap: var(--gap-md);
@@ -332,7 +316,7 @@ article {
   box-shadow: var(--box-shadow);
 }
 
-header {
+body > header {
   grid-area: title;
 
   h1 {
@@ -371,6 +355,13 @@ main {
 
     break-inside: avoid;
 
+    > header {
+      align-self: start;
+      text-align: right;
+      padding-top: 0.5em;
+      writing-mode: sideways-lr;
+    }
+
     > div {
       display: flex;
       flex-direction: column;
@@ -379,7 +370,7 @@ main {
   }
 }
 
-.phone {
+.sensitive {
   display: none;
 }
 
@@ -387,6 +378,11 @@ main {
   article:target {
     scroll-margin-top: var(--gap-lg);
     box-shadow: 0 0 var(--gap-sm) var(--color-a);
+  }
+
+  main > section > header {
+    position: sticky;
+    top: 0;
   }
 
   @media (max-width: 992px) {
@@ -455,7 +451,7 @@ main {
   :root {
     --gap-sm: 0.3em;
     --gap-md: 0.9em;
-    --gap-lg: 1.15em;
+    --gap-lg: 1.1em;
     --line-height: 1.4em;
 
     --title: #000;
@@ -471,7 +467,7 @@ main {
   }
 
   body {
-    margin: 0 1px;
+    margin: 0;
     padding: 0;
     max-width: 100%;
 
@@ -515,12 +511,13 @@ main {
     border: var(--border-width) solid var(--bg-c);
   }
 
-  article {
+  article,
+  section section {
     background: none;
     padding: var(--gap-sm);
   }
 
-  article section {
+  section section > article {
     background: none;
     padding: var(--gap-md);
     border: var(--border-width) solid

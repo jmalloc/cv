@@ -25,69 +25,75 @@
   </head>
 
   <body>
-    <div class="splash"></div>
+    <div class="splash" aria-hidden="true"></div>
 
-    <img class="avatar" src="images/avatar.jpg" alt="James Harris" />
+    <img class="avatar" src="images/avatar.jpg" alt="Photograph of James Harris" />
 
     <header>
       <h1>James Harris</h1>
       <h2>Senior Software Engineer</h2>
     </header>
 
-    <nav>
+    <nav aria-label="Contact Information & Links">
       <ul class="links">
         <li>
-          <a href="https://maps.app.goo.gl/hyKU1jCwBRrNoh1z9">
-            <svg><use href="images/icons.svg#location"></use></svg>
+          <a
+            href="https://maps.app.goo.gl/hyKU1jCwBRrNoh1z9"
+            rel="noopener noreferrer"
+            aria-label="View location on Google Maps"
+          >
+            <svg aria-hidden="true"><use href="images/icons.svg#location"></use></svg>
             <span>Brisbane, Australia</span>
           </a>
         </li>
 
-        <li class="phone">
-          <a href="tel:+614XXXXXXXX">
-            <svg><use href="images/icons.svg#phone"></use></svg>
-            <span>04XX XXX XXX</span>
+        <li class="sensitive">
+          <a href="tel:+614XXXXXXXX" aria-label="Phone James on 04XX XXX XXX">
+            <svg aria-hidden="true"><use href="images/icons.svg#phone"></use></svg>
+            <span aria-hidden="true">04XX XXX XXX</span>
           </a>
         </li>
 
         <li>
-          <a href="mailto:contact@jamesharris.id.au">
-            <svg><use href="images/icons.svg#email"></use></svg>
-            <span>contact@jamesharris.id.au</span>
+          <a href="mailto:contact@jamesharris.id.au" aria-label="Email James at contact@jamesharris.id.au">
+            <svg aria-hidden="true"><use href="images/icons.svg#email"></use></svg>
+            <span aria-hidden="true">contact@jamesharris.id.au</span>
           </a>
         </li>
 
         <li>
-          <a href="https://www.linkedin.com/in/jmalloc/">
-            <svg><use href="images/icons.svg#linkedin"></use></svg>
-            <span>jmalloc</span>
+          <a href="https://www.linkedin.com/in/jmalloc/" rel="noopener noreferrer" aria-label="View LinkedIn profile">
+            <svg aria-hidden="true"><use href="images/icons.svg#linkedin"></use></svg>
+            <span aria-hidden="true">jmalloc</span>
           </a>
         </li>
 
         <li>
-          <a href="https://github.com/jmalloc">
-            <svg><use href="images/icons.svg#github"></use></svg>
-            <span>jmalloc</span>
+          <a href="https://github.com/jmalloc" rel="noopener noreferrer" aria-label="View GitHub profile">
+            <svg aria-hidden="true"><use href="images/icons.svg#github"></use></svg>
+            <span aria-hidden="true">jmalloc</span>
           </a>
         </li>
 
         <li class="interactive">
-          <a href="downloads/james-harris-cv.pdf" download>
-            <svg><use href="images/icons.svg#download"></use></svg>
-            <span>Download PDF</span>
+          <a href="downloads/james-harris-cv.pdf" aria-label="Download PDF" download>
+            <svg aria-hidden="true"><use href="images/icons.svg#download"></use></svg>
+            <span aria-hidden="true">Download PDF</span>
           </a>
         </li>
       </ul>
     </nav>
 
     <main>
-      <section id="profile">
-        <h3>
-          <a href="#profile">
-            <svg><use href="images/icons.svg#link"></use></svg>
-            Profile
-          </a>
-        </h3>
+      <section id="profile" aria-label="Profile">
+        <header>
+          <h3>
+            <a href="#profile" aria-label="Permalink to Profile section">
+              <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
+              Profile
+            </a>
+          </h3>
+        </header>
 
         <div>
           <p>
@@ -99,15 +105,14 @@
             My experience spans <strong>startups, small businesses, and larger organisations</strong>. I have a proven
             track record of <strong>team and project leadership</strong>, taking ownership of architecture, process, and
             product direction. I seek environments where I can
-            <strong>guide platform direction and engineering practices</strong>, preferring for roles that emphasise
-            technical leadership over pure people management.
+            <strong>guide platform direction and engineering practices</strong>, preferring technical leadership over
+            pure people management.
           </p>
 
           <p>
             I'm the author of <a href="#dogma">Dogma</a>, an open-source ecosystem for building
-            <strong>distributed, real-time and event-driven applications in Go</strong>. This project reflects my focus
-            on building maintainable systems with clear architectural boundaries and a strong emphasis on developer
-            experience.
+            <strong>distributed event-driven applications in Go</strong>. This project reflects my focus on building
+            maintainable systems with clear architectural boundaries and a positive developer experience.
           </p>
 
           <p>
@@ -117,13 +122,15 @@
         </div>
       </section>
 
-      <section id="skills">
-        <h3>
-          <a href="#skills">
-            <svg><use href="images/icons.svg#link"></use></svg>
-            Skills + Experience
-          </a>
-        </h3>
+      <section id="skills" aria-label="Skills and Experience">
+        <header>
+          <h3>
+            <a href="#skills" aria-label="Permalink to Skills section">
+              <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
+              Skills + Experience
+            </a>
+          </h3>
+        </header>
 
         <div>
           <div class="cards">
@@ -283,63 +290,69 @@
           </div>
 
           <aside>
-            Additional experience includes frontend work with HTML, CSS, React, and Next.js, and past involvement in
-            embedded systems, C++, and electronics hardware design.
+            Additional experience includes C++, HTML/CSS, Python and C# and limited commercial experience with embedded
+            systems and electronics hardware design.
           </aside>
         </div>
       </section>
 
-      <section id="education">
-        <h3>
-          <a href="#education">
-            <svg><use href="images/icons.svg#link"></use></svg>
-            Education
-          </a>
-        </h3>
+      <section id="education" aria-label="Education">
+        <header>
+          <h3>
+            <a href="#education" aria-label="Permalink to Education section">
+              <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
+              Education
+            </a>
+          </h3>
+        </header>
 
         <div>
           <article>
-            <div>
+            <header>
               <h4>Diploma of Information Technology</h4>
               <h5>Software Development</h5>
               <h6>QANTM college (SAE), Brisbane &bullet; 2001</h6>
-            </div>
+            </header>
           </article>
 
           <article>
-            <div>
+            <header>
               <h4>Certificate III in Electronics</h4>
-              <h6>South Bank TAFE, Brisbane &bullet; 1998 &mdash; 1999</h6>
-            </div>
+              <h6>South Bank TAFE, Brisbane &bullet; 1998 <span aria-label="through">&mdash;</span> 1999</h6>
+            </header>
           </article>
         </div>
       </section>
 
-      <section id="employment">
-        <h3>
-          <a href="#employment">
-            <svg><use href="images/icons.svg#link"></use></svg>
-            Employment History
-          </a>
-        </h3>
+      <section id="employment" aria-label="Employment History">
+        <header>
+          <h3>
+            <a href="#employment" aria-label="Permalink to Employment section">
+              <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
+              Employment History
+            </a>
+          </h3>
+        </header>
 
         <div>
-          <article id="betsecure">
-            <div class="heading">
+          <section id="betsecure" aria-label="Employer: BetSecure">
+            <header>
               <h4>
-                <a href="#betsecure">
+                <a href="#betsecure" aria-label="Permalink to BetSecure section">
                   BetSecure
-                  <svg><use href="images/icons.svg#link"></use></svg>
+                  <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
                 </a>
               </h4>
               <h6>iGaming Geolocation, Compliance &amp; Fraud Prevention</h6>
-            </div>
+            </header>
 
-            <section>
-              <div class="heading">
-                <h5>Principal Software Engineer</h5>
-                <h6>Nov 2021 &mdash; present &bullet; 3.5 years &bullet; Fully Remote</h6>
-              </div>
+            <article aria-label="Role: Principal Software Engineer at BetSecure">
+              <header>
+                <h5 aria-hidden="true">Principal Software Engineer</h5>
+                <h6>
+                  Nov 2021 <span aria-label="through">&mdash;</span> present &bullet; 3.5 years &bullet; Fully Remote
+                </h6>
+              </header>
 
               <p>
                 Shared <strong>responsibility for technical and product leadership</strong> across a startup delivering
@@ -357,12 +370,12 @@
               <p>
                 <strong>Directed the architecture and implementation of backend systems</strong>, including geolocation
                 services, API gateways, and compliance logic. Services were built in Go using an
-                <strong>event-sourced architecture, following CQRS and DDD principles</strong>.
+                <strong>event-sourced architecture, following CQRS and domain-driven design principles</strong>.
               </p>
 
               <ul class="bullets">
                 <li>mentored engineers in distributed design, event-sourcing, read-model projection, and CQRS</li>
-                <li>guided architecture across teams using domain-driven design (DDD) principles</li>
+                <li>guided architecture across multiple autonomous teams</li>
                 <li>interpreted regulatory documents to ensure systems adhere to state-specific compliance rules</li>
                 <li>built a Kubernetes-based developer platform with on-demand environments provisioned via Slack</li>
                 <li>developed tools for in-cluster development using real domains, certificates and cloud services</li>
@@ -393,25 +406,28 @@
                 My role at BetSecure concludes on 1st August 2025 due to the parent company winding down its Australian
                 operations for strategic reasons unrelated to team performance or product quality.
               </aside>
-            </section>
-          </article>
+            </article>
+          </section>
 
-          <article id="codeworx">
-            <div class="heading">
+          <section id="codeworx" aria-label="Employer: Codeworx">
+            <header>
               <h4>
-                <a href="#codeworx">
+                <a href="#codeworx" aria-label="Permalink to Codeworx section">
                   Codeworx
-                  <svg><use href="images/icons.svg#link"></use></svg>
+                  <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
                 </a>
               </h4>
               <h6>Online poker &amp; Sports Betting</h6>
-            </div>
+            </header>
 
-            <section>
-              <div class="heading">
-                <h5>Software Development Manager</h5>
-                <h6>Dec 2008 &mdash; Nov 2021 &bullet; 13 years &bullet; in-office / hybrid-remote</h6>
-              </div>
+            <article aria-label="Role: Software Development Manager at Codeworx">
+              <header>
+                <h5 aria-hidden="true">Software Development Manager</h5>
+                <h6>
+                  Dec 2008 <span aria-label="through">&mdash;</span> Nov 2021 &bullet; 13 years &bullet; in-office /
+                  hybrid-remote
+                </h6>
+              </header>
 
               <p>
                 Held <strong>long-term responsibility for the architecture, quality, and continuity</strong> of backend
@@ -449,13 +465,15 @@
                 <li>Docker</li>
                 <li>Bamboo</li>
               </ul>
-            </section>
+            </article>
 
-            <section>
-              <div class="heading">
-                <h5>Software Developer</h5>
-                <h6>Jul 2006 &mdash; Dec 2008 &bullet; 2.5 years &bullet; in-office</h6>
-              </div>
+            <article aria-label="Role: Software Developer at Codeworx">
+              <header>
+                <h5 aria-hidden="true">Software Developer</h5>
+                <h6>
+                  Jul 2006 <span aria-label="through">&mdash;</span> Dec 2008 &bullet; 2.5 years &bullet; in-office
+                </h6>
+              </header>
 
               <p>
                 Member of a team of PHP developers responsible for the backoffice and player-facing features of the
@@ -486,25 +504,27 @@
                 <li>FreeBSD</li>
                 <li>SVN</li>
               </ul>
-            </section>
-          </article>
+            </article>
+          </section>
 
-          <article id="managed-solutions">
-            <div class="heading">
+          <section id="managed-solutions" aria-label="Employer: Managed Solutions">
+            <header>
               <h4>
-                <a href="#managed-solutions">
+                <a href="#managed-solutions" aria-label="Permalink to Managed Solutions section">
                   Managed Solutions
-                  <svg><use href="images/icons.svg#link"></use></svg>
+                  <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
                 </a>
               </h4>
               <h6>IT services &amp; internet service provider</h6>
-            </div>
+            </header>
 
-            <section>
-              <div class="heading">
-                <h5>Software Developer</h5>
-                <h6>Feb 2005 &mdash; Jul 2006 &bullet; 1.5 years &bullet; in-office</h6>
-              </div>
+            <article aria-label="Role: Software Developer at Managed Solutions">
+              <header>
+                <h5 aria-hidden="true">Software Developer</h5>
+                <h6>
+                  Feb 2005 <span aria-label="through">&mdash;</span> Jul 2006 &bullet; 1.5 years &bullet; in-office
+                </h6>
+              </header>
 
               <p>
                 Streamlined daily operations for field technicians by
@@ -532,25 +552,25 @@
                 <li>Linux</li>
                 <li>SVN</li>
               </ul>
-            </section>
-          </article>
+            </article>
+          </section>
 
-          <article id="oz-servers">
-            <div class="heading">
+          <section id="oz-servers" aria-label="Employer: Oz Servers">
+            <header>
               <h4>
-                <a href="#oz-servers">
+                <a href="#oz-servers" aria-label="Permalink to Oz Servers section">
                   Oz Servers
-                  <svg><use href="images/icons.svg#link"></use></svg>
+                  <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
                 </a>
               </h4>
               <h6>Web hosting &amp; Dedicated Servers</h6>
-            </div>
+            </header>
 
-            <section>
-              <div class="heading">
-                <h5>Lead Software Developer</h5>
-                <h6>2002 &mdash; Feb 2005 &bullet; 3.5 years &bullet; in-office</h6>
-              </div>
+            <article aria-label="Role: Lead Software Developer at Oz Servers">
+              <header>
+                <h5 aria-hidden="true">Lead Software Developer</h5>
+                <h6>2002 <span aria-label="through">&mdash;</span> Feb 2005 &bullet; 3.5 years &bullet; in-office</h6>
+              </header>
 
               <p>
                 Enabled the company’s expansion into dedicated hosting and co-location by
@@ -578,91 +598,105 @@
               </ul>
 
               <aside>
-                The platform remained in active use for many years after my departure, supporting business operations
-                until the company’s acquisition by <em>Servers Australia</em> in 2017.
+                The platform remained in active use for many years, supporting business operations until the company’s
+                acquisition by <em>Servers Australia</em> in 2017.
               </aside>
-            </section>
-          </article>
+            </article>
+          </section>
         </div>
       </section>
 
-      <section id="open-source">
-        <h3>
-          <a href="#open-source">
-            <svg><use href="images/icons.svg#link"></use></svg>
-            Open Source
-          </a>
-        </h3>
+      <section id="open-source" aria-label="Open Source Projects">
+        <header>
+          <h3>
+            <a href="#open-source" aria-label="Permalink to Open Source section">
+              <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
+              Open Source
+            </a>
+          </h3>
+        </header>
 
         <div>
           <div class="cards">
-            <article id="dogma">
-              <div class="heading">
+            <article id="dogma" aria-label="Dogma">
+              <header>
                 <h4>
-                  <a href="#dogma">
+                  <a href="#dogma" aria-label="Permalink to Dogma section">
                     Dogma
-                    <svg><use href="images/icons.svg#link"></use></svg>
+                    <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
                   </a>
                 </h4>
-                <h6>Event-sourcing ecosystem for Go</h6>
-              </div>
+                <h6>Message-based ecosystem for Go</h6>
+              </header>
 
-              <p>Dogma is a comprehensive toolkit for building message-based, event-sourced applications in Go.</p>
+              <p>Dogma is a comprehensive set of tools for building message-based applications in Go.</p>
 
               <ul class="links">
                 <li>
-                  <a href="https://github.com/dogmatiq/dogma#readme">
-                    <svg><use href="images/icons.svg#github"></use></svg>
-                    <span>dogmatiq/dogma</span>
+                  <a
+                    href="https://github.com/dogmatiq/dogma#readme"
+                    rel="noopener noreferrer"
+                    aria-label="View Dogma on GitHub"
+                  >
+                    <svg aria-hidden="true"><use href="images/icons.svg#github"></use></svg>
+                    <span aria-hidden="true">dogmatiq/dogma</span>
                   </a>
                 </li>
               </ul>
             </article>
 
-            <article id="recoil">
-              <div class="heading">
+            <article id="recoil" aria-label="Recoil">
+              <header>
                 <h4>
-                  <a href="#recoil">
+                  <a href="#recoil" aria-label="Permalink to Recoil section">
                     Recoil
-                    <svg><use href="images/icons.svg#link"></use></svg>
+                    <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
                   </a>
                 </h4>
                 <h6>Asynchronous coroutines for PHP 7</h6>
-              </div>
+              </header>
 
               <p>
-                Recoil eases development of async applications by presenting control flow in a familiar imperative
-                syntax.
+                Recoil provides a generator-based syntax for expressing asynchronous logic in a familiar imperative
+                manner.
               </p>
 
               <ul class="links">
                 <li>
-                  <a href="https://github.com/recoilphp/recoil#readme">
-                    <svg><use href="images/icons.svg#github"></use></svg>
-                    <span>recoilphp/recoil</span>
+                  <a
+                    href="https://github.com/recoilphp/recoil#readme"
+                    rel="noopener noreferrer"
+                    aria-label="View Recoil on GitHub"
+                  >
+                    <svg aria-hidden="true"><use href="images/icons.svg#github"></use></svg>
+                    <span aria-hidden="true">recoilphp/recoil</span>
                   </a>
                 </li>
               </ul>
             </article>
 
-            <article id="grit">
-              <div class="heading">
+            <article id="grit" aria-label="Grit">
+              <header>
                 <h4>
-                  <a href="#grit">
+                  <a href="#grit" aria-label="Permalink to Grit section">
                     Grit
-                    <svg><use href="images/icons.svg#link"></use></svg>
+                    <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
                   </a>
                 </h4>
                 <h6>CLI for management of Git clones</h6>
-              </div>
+              </header>
 
-              <p>Grit indexes your local Git clones, with fast directory switching &amp; autocomplete.</p>
+              <p>Grit creates and indexes your local Git clones, with fast directory switching &amp; autocomplete.</p>
 
               <ul class="links">
                 <li>
-                  <a href="https://github.com/jmalloc/grit#readme">
-                    <svg><use href="images/icons.svg#github"></use></svg>
-                    <span>jmalloc/grit</span>
+                  <a
+                    href="https://github.com/jmalloc/grit#readme"
+                    rel="noopener noreferrer"
+                    aria-label="View Grit on GitHub"
+                  >
+                    <svg aria-hidden="true"><use href="images/icons.svg#github"></use></svg>
+                    <span aria-hidden="true">jmalloc/grit</span>
                   </a>
                 </li>
               </ul>
@@ -671,89 +705,91 @@
         </div>
       </section>
 
-      <section id="references">
-        <h3>
-          <a href="#references">
-            <svg><use href="images/icons.svg#link"></use></svg>
-            References
-          </a>
-        </h3>
+      <section id="references" aria-label="References">
+        <header>
+          <h3>
+            <a href="#references" aria-label="Permalink to References section">
+              <svg aria-hidden="true"><use href="images/icons.svg#link"></use></svg>
+              References
+            </a>
+          </h3>
+        </header>
 
         <div>
           <div class="cards">
             <article>
-              <div class="heading">
+              <header>
                 <h4>Dan Henke</h4>
                 <h5><a href="#betsecure">BetSecure</a></h5>
-                <h6>General Manager &bullet; manager</h6>
-              </div>
+                <h6>General Manager</h6>
+              </header>
 
               <ul class="links">
                 <li>
-                  <a href="mailto:contact@danhenke.au">
-                    <svg><use href="images/icons.svg#email"></use></svg>
-                    <span>contact@danhenke.au</span>
+                  <a href="mailto:contact@danhenke.au" aria-label="Email Dan at contact@danhenke.au">
+                    <svg aria-hidden="true"><use href="images/icons.svg#email"></use></svg>
+                    <span aria-hidden="true">contact@danhenke.au</span>
                   </a>
                 </li>
-                <li class="phone">
-                  <a href="tel:+614XXXXXXXX">
-                    <svg><use href="images/icons.svg#phone"></use></svg>
-                    <span>04XX XXX XXX</span>
+                <li class="sensitive">
+                  <a href="tel:+614XXXXXXXX" aria-label="Phone Dan on 04XX XXX XXX">
+                    <svg aria-hidden="true"><use href="images/icons.svg#phone"></use></svg>
+                    <span aria-hidden="true">04XX XXX XXX</span>
                   </a>
                 </li>
               </ul>
             </article>
 
             <article>
-              <div class="heading">
+              <header>
                 <h4>Erin Millard</h4>
                 <h5><a href="#betsecure">BetSecure</a></h5>
-                <h6>Principal Software Engineer &bullet; peer</h6>
-              </div>
+                <h6>Principal Software Engineer</h6>
+              </header>
 
               <ul class="links">
                 <li>
-                  <a href="mailto:contact@erin.au">
-                    <svg><use href="images/icons.svg#email"></use></svg>
-                    <span>contact@erin.au</span>
+                  <a href="mailto:contact@erin.au" aria-label="Email Erin at contact@erin.au">
+                    <svg aria-hidden="true"><use href="images/icons.svg#email"></use></svg>
+                    <span aria-hidden="true">contact@erin.au</span>
                   </a>
                 </li>
 
-                <li class="phone">
-                  <a href="tel:+614XXXXXXXX">
-                    <svg><use href="images/icons.svg#phone"></use></svg>
-                    <span>04XX XXX XXX</span>
+                <li class="sensitive">
+                  <a href="tel:+614XXXXXXXX" aria-label="Phone Erin on 04XX XXX XXX">
+                    <svg aria-hidden="true"><use href="images/icons.svg#phone"></use></svg>
+                    <span aria-hidden="true">04XX XXX XXX</span>
                   </a>
                 </li>
               </ul>
             </article>
 
             <article>
-              <div class="heading">
+              <header>
                 <h4>Danil Petrov</h4>
                 <h5><a href="#codeworx">Codeworx</a> &amp; <a href="#betsecure">BetSecure</a></h5>
-                <h6>Senior Software Engineer &bullet; direct report</h6>
-              </div>
+                <h6>Senior Software Engineer</h6>
+              </header>
 
               <ul class="links">
                 <li>
-                  <a href="mailto:danilpetrovvi@gmail.com">
-                    <svg><use href="images/icons.svg#email"></use></svg>
-                    <span>danilpetrovvi@gmail.com</span>
+                  <a href="mailto:danilpetrovvi@gmail.com" aria-label="Email Danil at danilpetrovvi@gmail.com">
+                    <svg aria-hidden="true"><use href="images/icons.svg#email"></use></svg>
+                    <span aria-hidden="true">danilpetrovvi@gmail.com</span>
                   </a>
                 </li>
 
-                <li class="phone">
-                  <a href="tel:+614XXXXXXXX">
-                    <svg><use href="images/icons.svg#phone"></use></svg>
-                    <span>04XX XXX XXX</span>
+                <li class="sensitive">
+                  <a href="tel:+614XXXXXXXX" aria-label="Phone Danil on 04XX XXX XXX">
+                    <svg aria-hidden="true"><use href="images/icons.svg#phone"></use></svg>
+                    <span aria-hidden="true">04XX XXX XXX</span>
                   </a>
                 </li>
               </ul>
             </article>
           </div>
 
-          <aside>Telephone contact details are available on request.</aside>
+          <aside class="non-sensitive">Telephone contact details are available on request.</aside>
         </div>
       </section>
     </main>
