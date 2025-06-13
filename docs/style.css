@@ -463,7 +463,7 @@ main {
     --text-strong: #000;
     --text-weak: #777;
 
-    --border-width: 1px;
+    --border-width: 0.3mm;
     --border-opacity: 30%;
 
     --text-shadow: none;
@@ -497,6 +497,7 @@ main {
     text-decoration: none;
   }
 
+  .interactive,
   .splash {
     display: none;
   }
@@ -507,23 +508,23 @@ main {
 
   ul.tags {
     font-size: 6pt;
+  }
 
-    li {
-      background: none;
-      border: var(--border-width) solid var(--bg-c);
-    }
+  ul.tags li {
+    background: none;
+    border: var(--border-width) solid var(--bg-c);
   }
 
   article {
     background: none;
     padding: var(--gap-sm);
+  }
 
-    section {
-      background: none;
-      padding: var(--gap-md);
-      border: var(--border-width) solid
-        rgba(from var(--color-a) r g b / var(--border-opacity));
-    }
+  article section {
+    background: none;
+    padding: var(--gap-md);
+    border: var(--border-width) solid
+      rgba(from var(--color-a) r g b / var(--border-opacity));
   }
 
   aside {
