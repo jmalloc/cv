@@ -1,4 +1,6 @@
 :root {
+  --max-width: 1000px;
+
   --gap-sm: 0.4em;
   --gap-md: 1em;
   --gap-lg: 1.2em;
@@ -287,13 +289,14 @@ section section {
   --blur: 4em;
 
   position: absolute;
-  top: calc(var(--blur) * -1);
-  height: calc(var(--avatar-size) + var(--gap-lg) + var(--blur));
-  left: 45%;
-  width: 500px;
   z-index: -1;
   pointer-events: none;
-  overflow: hidden;
+
+  top: calc(var(--blur) * -1);
+  left: 40%;
+  height: calc(var(--avatar-size) + var(--gap-lg) + var(--blur));
+  width: calc(var(--max-width) * 0.5);
+  max-width: 100vw;
 
   opacity: var(--splash-opacity);
   filter: blur(var(--blur));
