@@ -370,7 +370,7 @@ main {
   }
 }
 
-.sensitive {
+[data-ciphertext] {
   display: none;
 }
 
@@ -451,7 +451,7 @@ main {
   :root {
     --gap-sm: 0.3em;
     --gap-md: 0.9em;
-    --gap-lg: 1.1em;
+    --gap-lg: 1.2em;
     --line-height: 1.4em;
 
     --title: #000;
