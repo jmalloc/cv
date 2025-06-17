@@ -318,6 +318,8 @@ section section {
   border-radius: 50%;
   outline: var(--avatar-border-size) solid var(--avatar-border);
   box-shadow: var(--box-shadow);
+
+  transform: scale(-1, 1);
 }
 
 body > header {
