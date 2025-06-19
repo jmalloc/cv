@@ -382,6 +382,10 @@ main {
 }
 
 @media screen {
+  .print-only {
+    display: none;
+  }
+
   article:target {
     scroll-margin-top: var(--gap-lg);
     box-shadow: 0 0 var(--gap-sm) var(--color-a);

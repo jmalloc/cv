@@ -81,7 +81,7 @@ window.onload = () => {
       replace(elem, "(redacted)", plaintext);
     }
 
-    for (const elem of document.querySelectorAll(".crypto-unavailable")) {
+    for (const elem of document.querySelectorAll(".redacted-version-only")) {
       elem.remove();
     }
   })().catch((err) => {
