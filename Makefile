@@ -7,6 +7,8 @@ GENERATED_FILES += docs/downloads/james-harris-cv.pdf
 run: $(GENERATED_FILES)
 	go run server.go
 
+precommit:: docs/downloads/james-harris-cv-full.pdf
+
 docs/index.html: $(wildcard docs/assets/*)
 	for f in docs/assets/*; do \
 		hash=$$(sha256sum "$$f" | cut -c1-7); \
@@ -16,6 +18,9 @@ docs/index.html: $(wildcard docs/assets/*)
 
 docs/downloads/james-harris-cv.pdf: docs/index.html
 	node render.js $< $@
+
+docs/downloads/james-harris-cv-full.pdf: docs/index.html
+	node render.js $< $@ "$$CV_KEY"
 
 .makefiles/%:
 	@curl -sfL https://makefiles.dev/v1 | bash /dev/stdin "$@"

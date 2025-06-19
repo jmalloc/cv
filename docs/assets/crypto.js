@@ -1,7 +1,7 @@
 const algo = "AES-GCM";
 
 async function loadKey() {
-  const key = localStorage.getItem("key");
+  const key = window.CV_KEY;
   if (!key) {
     return null;
   }
