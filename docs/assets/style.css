@@ -360,7 +360,6 @@ main {
     display: grid;
     grid-template-columns: 0.9em 1fr;
     gap: var(--gap-lg);
-
     break-inside: avoid;
 
     > header {

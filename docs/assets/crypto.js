@@ -11,7 +11,7 @@ async function loadKey() {
     new TextEncoder().encode(key),
     { name: algo },
     false,
-    ["encrypt", "decrypt"]
+    ["encrypt", "decrypt"],
   );
 }
 
@@ -25,7 +25,7 @@ async function encrypt(plaintext) {
   const ciphertext = await crypto.subtle.encrypt(
     { name: algo, iv: iv },
     key,
-    new TextEncoder().encode(plaintext)
+    new TextEncoder().encode(plaintext),
   );
 
   const message = new Uint8Array(iv.byteLength + ciphertext.byteLength);
@@ -43,7 +43,7 @@ async function decrypt(key, base64message) {
   const decrypted = await crypto.subtle.decrypt(
     { name: algo, iv: iv },
     key,
-    encrypted
+    encrypted,
   );
 
   return new TextDecoder().decode(decrypted);
