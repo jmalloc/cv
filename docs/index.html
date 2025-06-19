@@ -21,8 +21,8 @@
       referrerpolicy="no-referrer"
     />
 
-    <link href="assets/style.css?feb7671" rel="stylesheet" />
-    <script lang="javascript" src="assets/crypto.js?0db5f31"></script>
+    <link href="assets/style.css?5869c6a" rel="stylesheet" />
+    <script lang="javascript" src="assets/crypto.js?c54d5dd"></script>
   </head>
 
   <body>
@@ -83,6 +83,20 @@
           </a>
         </li>
       </ul>
+
+      <aside class="print-only">
+        This version of my CV was published on <strong id="publish-date">(date)</strong> &mdash; the latest version is
+        always available at <a href="https://cv.jamesharris.id.au">cv.jamesharris.id.au</a>.
+
+        <script lang="javascript">
+          // Set the published date in the print-only section.
+          document.getElementById("publish-date").textContent = new Date().toLocaleDateString("en-AU", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+        </script>
+      </aside>
     </nav>
 
     <main>
@@ -120,11 +134,6 @@
             I care deeply about how software is built, both for the practical benefits to the team, and for the love of
             the craft itself.
           </p>
-
-          <aside class="print-only">
-            The latest version of my CV is always available at
-            <a href="https://cv.jamesharris.id.au">https://cv.jamesharris.id.au</a>.
-          </aside>
         </div>
       </section>
 

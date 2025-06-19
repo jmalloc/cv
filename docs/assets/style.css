@@ -168,6 +168,10 @@ aside {
   font-style: italic;
   font-size: 0.8rem;
   line-height: var(--line-height);
+
+  a {
+    color: var(--text-strong);
+  }
 }
 
 ul.links {
@@ -342,6 +346,7 @@ nav {
   display: flex;
   flex-direction: column;
   font-size: 1.1em;
+  gap: var(--gap-md);
 
   ul.links li svg {
     fill: var(--color-b);
