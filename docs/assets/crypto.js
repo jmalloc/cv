@@ -67,8 +67,6 @@ function replace(elem, from, to) {
 
 window.onload = () => {
   (async () => {
-    console.log(await encrypt("0438 872 813"));
-
     key = await loadKey();
     if (!key) {
       return;
