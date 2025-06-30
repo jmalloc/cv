@@ -36,17 +36,29 @@
   --box-shadow: 0 0 var(--gap-sm) var(--bg-b);
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --title: #dde;
-    --text: #aab;
-    --text-strong: #ccd;
-    --text-weak: #778;
+@media screen {
+  @media (prefers-color-scheme: light) {
+    .dark-only {
+      visibility: hidden;
+    }
+  }
 
-    --bg-a: #112;
-    --bg-b: #091c26;
-    --bg-c: #223a;
-    --shadow: #001;
+  @media (prefers-color-scheme: dark) {
+    .light-only {
+      visibility: hidden;
+    }
+
+    :root {
+      --title: #dde;
+      --text: #aab;
+      --text-strong: #ccd;
+      --text-weak: #778;
+
+      --bg-a: #112;
+      --bg-b: #091c26;
+      --bg-c: #223a;
+      --shadow: #001;
+    }
   }
 }
 
@@ -187,15 +199,16 @@ ul.links {
   li {
     list-style: none;
 
-    svg {
-      float: left;
-      height: 1em;
-      width: 1em;
-      fill: var(--color-a);
-    }
-
     a {
       text-decoration: none;
+      align-items: center;
+      display: flex;
+
+      svg {
+        height: 1em;
+        width: 1em;
+        fill: var(--color-a);
+      }
 
       span {
         margin-left: var(--gap-sm);
@@ -348,8 +361,29 @@ nav {
   font-size: 1.1em;
   gap: var(--gap-md);
 
-  ul.links li svg {
-    fill: var(--color-b);
+  ul.links {
+    li svg {
+      fill: var(--color-b);
+    }
+
+    > :has(+ :last-child) {
+      flex-grow: 1;
+    }
+
+    .theme-toggle {
+      border: 0.1em solid var(--color-b);
+      padding: 0.1em;
+      border-radius: 100vh;
+      display: flex;
+
+      a {
+        display: block;
+        background: var(--color-b);
+        width: 0.75em;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+    }
   }
 }
 
