@@ -1,0 +1,90 @@
+@page {
+  size: a4 portrait;
+  margin: 10mm;
+}
+
+@media print {
+  :root {
+    --gap-sm: 0.3em;
+    --gap-md: 0.9em;
+    --gap-lg: 1.2em;
+    --line-height: 1.4em;
+
+    --title: #000;
+    --text: #333;
+    --text-strong: #000;
+    --text-weak: #777;
+
+    --border-width: 0.3mm;
+    --border-opacity: 30%;
+
+    --text-shadow: none;
+    --box-shadow: none;
+  }
+
+  .screen-only {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+
+    font-size: 9pt;
+    background: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+
+  h3,
+  h4 {
+    font-size: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .splash {
+    display: none;
+  }
+
+  ul.bullets {
+    font-size: 8pt;
+  }
+
+  ul.tags {
+    font-size: 6pt;
+  }
+
+  ul.tags li {
+    background: none;
+    border: var(--border-width) solid var(--bg-c);
+  }
+
+  article,
+  section section {
+    background: none;
+    padding: var(--gap-sm);
+  }
+
+  section section > article {
+    background: none;
+    background: red;
+    padding: var(--gap-md);
+    border: var(--border-width) solid
+      rgba(from var(--color-a) r g b / var(--border-opacity));
+  }
+
+  aside {
+    font-size: 8pt;
+  }
+}

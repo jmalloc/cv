@@ -1,0 +1,77 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul.bullets {
+  font-size: 0.85rem;
+  line-height: var(--line-height);
+  padding-left: var(--gap-md);
+  list-style-type: "•"; /* use custom bullet to eliminate default gap */
+
+  li {
+    padding-left: var(--gap-sm);
+  }
+
+  li::marker {
+    color: var(--color-b);
+  }
+}
+
+ul.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  font-family: "Jura", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  li {
+    list-style: none;
+
+    margin: 0.15em;
+    padding: 0.35em;
+    line-height: 1em;
+    border-radius: 0.25em;
+
+    color: var(--color-a);
+    background: linear-gradient(-30deg, transparent -50%, var(--color-a) 750%);
+    text-shadow: var(--text-shadow);
+
+    white-space: nowrap;
+  }
+}
+
+ul.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-sm) var(--gap-md);
+
+  font-family: "Jura", sans-serif;
+  text-shadow: var(--text-shadow);
+  line-height: 1em;
+
+  li {
+    list-style: none;
+
+    .icon {
+      float: left;
+      height: 1em;
+      width: 1em;
+      fill: var(--color-a);
+    }
+
+    a > span {
+      margin-left: var(--gap-sm);
+    }
+  }
+}
+
+@media print {
+  ul.links > li:has(a[download]) {
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+:root {
+  --title: #334;
+  --text: #445;
+  --text-strong: #445;
+  --text-weak: #99a;
+
+  --color-a: #39c;
+  --color-b: #e91;
+
+  --bg-a: #fff;
+  --bg-b: #eef;
+  --bg-c: #e8f0ff;
+  --shadow: #eef;
+
+  --avatar-border: #f8f8ff;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --title: #dde;
+    --text: #aab;
+    --text-strong: #ccd;
+    --text-weak: #778;
+
+    --bg-a: #112;
+    --bg-b: #091c26;
+    --bg-c: #223a;
+    --shadow: #001;
+  }
+}

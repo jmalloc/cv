@@ -1,0 +1,72 @@
+:root {
+  --box-shadow: 0 0 var(--gap-sm) var(--bg-b);
+  --text-shadow: 0.03em 0.03em 0.03em var(--shadow);
+}
+
+body {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--gap-md);
+
+  color: var(--text);
+  background: linear-gradient(30deg, var(--bg-a) 0%, var(--bg-b) 100%);
+  background-attachment: fixed;
+
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 12pt;
+  font-optical-sizing: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Jura", sans-serif;
+  font-weight: 600;
+  line-height: 1em;
+  text-transform: uppercase;
+
+  text-shadow: var(--text-shadow);
+
+  a {
+    color: inherit;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-weight: 500;
+  color: var(--text-strong);
+}
+
+aside {
+  color: var(--text-weak);
+  font-style: italic;
+  font-size: 0.8rem;
+  line-height: var(--line-height);
+
+  a {
+    color: var(--text-strong);
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none;
+  }
+}

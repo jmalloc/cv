@@ -1,0 +1,131 @@
+:root {
+  --columns: 3;
+}
+
+h2 {
+  font-size: 0.9em;
+  color: var(--color-a);
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: var(--color-b);
+
+  > .subheading {
+    color: var(--color-a);
+  }
+}
+
+h4 {
+  font-size: 1rem;
+  color: var(--color-a);
+}
+
+a.permalink {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+
+  .icon-link {
+    display: none;
+    width: 0.7em;
+    height: 0.7em;
+    fill: var(--text-strong);
+  }
+}
+
+a.permalink:hover {
+  .icon-link {
+    display: inline;
+  }
+}
+
+.subheading {
+  font-size: 0.9em;
+  padding-top: 0.2em;
+  line-height: 1em;
+}
+
+.caption {
+  padding-top: 0.3em;
+
+  color: var(--text-weak);
+  text-shadow: var(--text-shadow);
+  font-size: 0.75em;
+
+  font-family: "Jura", sans-serif;
+  font-weight: 600;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: var(--gap-md);
+
+  /* break-inside: avoid; */
+
+  > :has(+ ul.tags),
+  > :has(+ ul.links) {
+    flex-grow: 1;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--gap-md);
+
+  .links {
+    flex-direction: column;
+  }
+}
+
+main > section {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--gap-lg);
+
+  > header {
+    padding-top: 0.5em;
+    writing-mode: sideways-lr;
+    align-self: start;
+    text-align: right;
+
+    a.permalink {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media screen {
+  main > section > header {
+    position: sticky;
+    top: 0;
+  }
+}
+
+section section,
+article {
+  padding: var(--gap-md);
+  border-radius: var(--gap-md);
+  background: var(--bg-c);
+  box-shadow: var(--box-shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+
+  article,
+  section {
+    /* display: flex;
+    flex-direction: column;
+    gap: var(--gap-md); */
+    /* break-inside: avoid; */
+
+    border-radius: var(--gap-sm);
+    background: linear-gradient(-30deg, transparent -50%, var(--bg-a) 300%);
+  }
+}
