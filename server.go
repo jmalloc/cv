@@ -26,9 +26,11 @@ func run() error {
 	defer cancel()
 
 	s := &http.Server{
-		Addr:    ":8080",
+		Addr:    "127.0.0.1:8080",
 		Handler: http.FileServer(http.Dir("./docs")),
 	}
+
+	fmt.Println("http://" + s.Addr)
 
 	go func() {
 		<-ctx.Done()
